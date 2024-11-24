@@ -99,20 +99,14 @@ function generateResume(name, email, phone, education, experience, skills, profi
 
     shareButton.addEventListener('click', function () {
         var resumeData = {
-            name: name,
-            email: email,
-            phone: phone,
-            education: education,
-            experience: experience,
-            skills: skills,
-            profilePicURL: profilePicURL
+            
         };
     
         // Convert resumeData to JSON and encode it in the URL
         var resumeDataURL = encodeURIComponent(JSON.stringify(resumeData));
     
         // Construct the shareable URL
-        var shareURL = window.location.href.split('?')[0] + '?resume=' + resumeDataURL;
+        var shareURL = window.location.href.split('?')[0] + '?';
     
         // Create an alert box with "Copy" and "Download as PDF" buttons
         var alertMessage = `
