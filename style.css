@@ -1,0 +1,205 @@
+/* Body Styles */
+
+body {
+    font-family: 'Times New Roman', Times, serif; /* Font style for the body */
+    margin: 20px;  /* Adds margin around the page */
+    padding: 0;  /* Removes any default padding */
+    background-color: rgb(4, 4, 4);  /* Dark background color */
+        margin: 0;   /* Resets margin to 0 for consistency */
+        height: 100vh;   /* Full viewport height */
+        
+    }
+     
+    /* Keyframe Animation for Gradient */
+
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+/* Form Styles */
+
+    form {
+        margin: auto;  /* Centers the form */
+        background: linear-gradient(145deg, #2f4f4f, #4b6b6b); /* Gradient background for the form */
+        border-radius: 12px; /* Rounded corners */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 4px 6px rgba(255, 255, 255, 0.1); /* Enhanced shadow for depth */
+        padding: 30px; /* More comfortable padding */
+        max-width: 600px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        backdrop-filter: blur(10px); /* Glass effect for modern look */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    }
+    
+    /* Hover Effects for the Form */
+
+    form:hover {
+        transform: translateY(-10px); /* Slight lift effect */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 6px 8px rgba(255, 255, 255, 0.2); /* Deeper shadow on hover */
+    }
+    
+    /* Media Query for Smaller Screens */
+
+    @media (max-width: 768px) {
+        form {
+            padding: 20px; /* Adjust padding for smaller screens */
+            max-width: 90%; /* Full width on small devices */
+        }
+    }
+    
+/* Header Styles */
+
+h1 {
+    font-size: 48px; /* Bigger for better visibility */
+    animation: colorBounce 3s infinite ease-in-out;
+    text-align: center;
+    margin-top: 50px;
+    background: linear-gradient(to right, #ff007c, #7303c0, #48dbfb); 
+    -webkit-background-clip: text; /* WebKit specific property */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent to show the gradient */ /* Clipping gradient to text */
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    filter: brightness(1.2); /* Brightens the gradient */
+}
+
+@keyframes colorBounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); color: #7b00ff; }
+    50% { transform: translateY(-20px); color: #7303c0; }
+    75% { transform: translateY(-10px); color: #48dbfb; }
+    100% { transform: translateY(0); color: #ff007c; }
+}
+
+
+fieldset {
+    border: 2px solid transparent; /* Transparent border for gradient */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #ffffff), 
+                linear-gradient(to right, #d903fc, #4801d4); /* Double gradient effect */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+fieldset:hover {
+    background: linear-gradient(to right, #f5e1fc, #e8d1ff), 
+                linear-gradient(to right, #4801d4, #d903fc); /* Hover gradient effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+legend {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4801d4; /* Matching with border gradient */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Light shadow for better visibility */
+    padding: 0 10px; /* Adds space around the legend text */
+    border-radius: 6px; /* Rounded corners for the legend background */
+    background-color: rgba(225, 141, 241, 0.8); /* Semi-transparent background */
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: black;
+
+}
+
+input, textarea {
+    margin-top: 4px;
+    padding: 10px;
+    width: calc(100% - 2px); /* Adjusted to align perfectly */
+    border: 2px solid transparent; /* Transparent border for gradient */
+    border-radius: 8px;
+    background: linear-gradient(to right, #ffffff, #ffffff), 
+                linear-gradient(to right, #ff007c, #6100ff); /* Double gradient */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #6100ff;
+    outline: none; /* Removes default outline */
+    background: linear-gradient(to right, #ffffff, #ffffff),
+                linear-gradient(to right, #48dbfb, #d003eb); /* Focus gradient */
+    box-shadow: 0 0 8px rgba(96, 0, 255, 0.5);
+    transform: scale(1.02); /* Slight enlargement on focus */
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(45deg, #ff007c, #6100ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #6100ff, #ff007c);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    color: #f0f0f0;
+}
+
+
+
+
+#resume-display h2 {
+    color: black;
+}
+
+#resume-display {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keeps particles behind your content */
+    background: linear-gradient(90deg, #0e0e0d, #0707eb, #757373, #e105da); /* Your existing gradient */
+    background-size: 300% 300%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
